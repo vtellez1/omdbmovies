@@ -1,4 +1,5 @@
 import React from 'react';
+import { conncect } from 'react-redux';
 
 const SearchResults = () => (
     <div>
