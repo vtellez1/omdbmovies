@@ -10,9 +10,11 @@ const SearchResults = (props) => {
     return (
     <div>
         <h1>Search Results </h1>
-        {/* {movies.length > 1 && movies.map(movie => 
-            <MovieCard key={movie.id} props={props}/>)}
-        {console.log(movies)} */}
+        
+        {movies.map(movie => (
+         <MovieCard key={movie.id} movie={movie} />   
+        ))}
+        
     </div>        
     )
 };
