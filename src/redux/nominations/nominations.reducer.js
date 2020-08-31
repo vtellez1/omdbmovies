@@ -15,7 +15,7 @@ const nominationsReducer = (state = INITIAL_STATE, action) => {
         case NominationsActionTypes.REMOVE_NOMINATION:
             return {
                 ...state,
-
+                nominations: removeNominationFromList(state.nominations, action.payload)
             }
         default:
             return state;
