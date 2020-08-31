@@ -1,9 +1,34 @@
 import React from 'react';
+import { connect } from 'react-redux';
 
-const NominatedList = () => (
+import MovieCard from '../components/movieCard/movieCard.component';
+import { MovieResultsContainer, MovieCards } from '../components/searchResults/searchResults.styles';
+
+const NominatedList = ({ nominations }) => {
+
+    let nominationList = nominations.nominations
+    console.log(nominationList);
+
+    return(
     <div>
+        <MovieResultsContainer>
         <h1>Nominated Movies</h1>
-    </div>
-);
+        <MovieCards>
+         {nominationList.map(movie => (
+            <MovieCard key={movie.id} movie={movie}/>   
+            ))}            
+        </MovieCards>
+        </MovieResultsContainer>
 
-export default NominatedList;
+    </div>
+    )
+
+};
+
+const mapStateToProps = state => {
+    return{
+        nominations: state.nominations
+    }
+}
+
+export default connect(mapStateToProps)(NominatedList);

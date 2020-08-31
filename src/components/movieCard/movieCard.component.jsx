@@ -5,11 +5,10 @@ import { addNomination } from '../../redux/nominations/nominations.actions'
 
 import { MovieCardContainer } from './movieCard.styles'
 
-const MovieCard = ({ movie, nominations, addNomination }) => {
+const MovieCard = ({ movie, addNomination }) => {
 
     const movieClick = () => {
         addNomination(movie)
-        console.log(nominations)
     }
 
     return (
@@ -24,8 +23,7 @@ const MovieCard = ({ movie, nominations, addNomination }) => {
 
 const mapStateToProps = state => {
     return{
-        movies: state.movies,
-        nominations: state.nominations
+        movies: state.movies
     }
 }
 

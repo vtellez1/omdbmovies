@@ -5,10 +5,9 @@ import MovieCard from '../movieCard/movieCard.component';
 
 import { MovieResultsContainer, MovieCards } from './searchResults.styles'
 
-const SearchResults = ({ movies, nominations }) => {
+const SearchResults = ({ movies }) => {
 
     let movieList = movies.movies;
-    console.log(nominations)   
 
     return (
     <div>
