@@ -25,7 +25,6 @@ const MovieCard = ({ movie, addNomination, removeNomination, nominated }) => {
             <button onClick={movieClick}>Nominate</button>
         }
 
-
         </MovieCardContainer>        
     )
 };
