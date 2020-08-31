@@ -5,7 +5,7 @@ import { addNomination, removeNomination } from '../../redux/nominations/nominat
 
 import { MovieCardContainer } from './movieCard.styles'
 
-const MovieCard = ({ movie, addNomination, removeNomination }) => {
+const MovieCard = ({ movie, addNomination, removeNomination, nominated }) => {
 
     const movieClick = () => {
         addNomination(movie)
@@ -20,8 +20,12 @@ const MovieCard = ({ movie, addNomination, removeNomination }) => {
             <img alt="movie poster" src={movie.Poster}/>
             <h3>{movie.Title}</h3>
             <p>Release Year: {movie.Year}</p>
+            {nominated ? 
+            <button onClick={removeNominee}>Remove Nomination</button> : 
             <button onClick={movieClick}>Nominate</button>
-            <button onClick={removeNominee}>Remove Nomination</button>
+        }
+
+
         </MovieCardContainer>        
     )
 };

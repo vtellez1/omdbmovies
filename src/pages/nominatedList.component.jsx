@@ -15,7 +15,7 @@ const NominatedList = ({ nominations }) => {
         <h1>Nominated Movies</h1>
         <MovieCards>
          {nominationList.map(movie => (
-            <MovieCard key={movie.id} movie={movie}/>   
+            <MovieCard key={movie.id} movie={movie} nominated={true}/>   
             ))}            
         </MovieCards>
         </MovieResultsContainer>
