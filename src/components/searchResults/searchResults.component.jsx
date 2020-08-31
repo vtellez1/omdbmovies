@@ -3,6 +3,8 @@ import { connect } from 'react-redux';
 
 import MovieCard from '../movieCard/movieCard.component';
 
+import { MovieResultsContainer, MovieCards } from './searchResults.styles'
+
 const SearchResults = ({  movies }) => {
 
     let movieList = movies.movies;
@@ -13,15 +15,18 @@ const SearchResults = ({  movies }) => {
         {movies.isFetching && <h2>Movies loading...! </h2>}
         
         {movies.isLoaded ? 
-        <div>
-            <h1>Search Results </h1>
+        <MovieResultsContainer>
+            <h2>Movie Search Results </h2>
+            <MovieCards>
             {movieList.map(movie => (
             <MovieCard key={movie.id} movie={movie} />   
-            ))}
-        </div> : 
+            ))}                
+            </MovieCards>
+
+        </MovieResultsContainer> : 
         
         <div>
-            <p>Search a movie title to load movies</p>
+            <p>Search a movie title to load movies.</p>
         </div>
         }
 

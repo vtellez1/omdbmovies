@@ -20,14 +20,12 @@ const SearchBar = ({ fetchMovies }) => {
 
     return(
       <div>
-        <h1>Search Movies</h1>
-
         <form onSubmit={handleSubmit}>
             <input 
             name='title'
             type='title'
             label='title'
-            placeholder='Movie Title'
+            placeholder='Search movie title'
             onChange={handleChange}
             required 
             minLength="3"/>

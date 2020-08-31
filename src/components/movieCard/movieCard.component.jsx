@@ -1,14 +1,15 @@
 import React from 'react';
 
+import { MovieCardContainer } from './movieCard.styles'
+
 const MovieCard = ({ movie }) => {
     return (
-        <div>
-            <p>Movie Card</p>
+        <MovieCardContainer>
             <img alt="movie poster" src={movie.Poster}/>
-            <h2>Title: {movie.Title}</h2>
-            <p>Year: {movie.Year}</p>
+            <h3>{movie.Title}</h3>
+            <p>Release Year: {movie.Year}</p>
             <button>Nominate</button>
-        </div>        
+        </MovieCardContainer>        
     )
 };
 
