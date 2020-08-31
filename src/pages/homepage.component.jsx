@@ -5,7 +5,6 @@ import SearchResults from '../components/searchResults/searchResults.component';
 
 const Homepage = () => (
     <div>
-        <h1>Homepage</h1>   
         <SearchBar/>
         <SearchResults/>
     </div>
