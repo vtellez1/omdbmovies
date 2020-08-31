@@ -3,18 +3,18 @@ import { connect } from 'react-redux';
 
 import MovieCard from '../movieCard/movieCard.component';
 
-const SearchResults = (props) => {
+const SearchResults = ({  movies }) => {
 
-    const { isFetching, movies, error } = props;
+    let movieList = movies.movies;
 
     return (
     <div>
         <h1>Search Results </h1>
-        
-        {movies.map(movie => (
+
+        {movies.isLoaded && 
+        movieList.map(movie => (
          <MovieCard key={movie.id} movie={movie} />   
         ))}
-        
     </div>        
     )
 };
@@ -23,9 +23,10 @@ const mapStateToProps = state => {
     return{
         movies: state.movies,
         isFetching: state.isFetching,
+        isLoaded: state.isLoaded,
         error: state.error
     }
 }
 
 
-export default connect(mapStateToProps, null)(SearchResults);
+export default connect(mapStateToProps)(SearchResults);

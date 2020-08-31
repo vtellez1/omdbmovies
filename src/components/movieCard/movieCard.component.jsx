@@ -1,12 +1,14 @@
 import React from 'react';
 
-const MovieCard = (props) => {
-    const { movies } = props;
+const MovieCard = ({ movie }) => {
+console.log(movie);
 
     return (
     <div>
         <p>Movie Card</p>
-        <h1>{console.log(movies.movies)}</h1>
+        <img src={movie.Poster}/>
+        <h1>Title: {movie.Title}</h1>
+        <p>Year: {movie.Year}</p>
     </div>        
     )
 };
