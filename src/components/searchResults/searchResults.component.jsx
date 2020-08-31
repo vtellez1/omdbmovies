@@ -5,9 +5,10 @@ import MovieCard from '../movieCard/movieCard.component';
 
 import { MovieResultsContainer, MovieCards } from './searchResults.styles'
 
-const SearchResults = ({  movies }) => {
+const SearchResults = ({ movies, nominations }) => {
 
     let movieList = movies.movies;
+    console.log(nominations)   
 
     return (
     <div>
@@ -19,8 +20,9 @@ const SearchResults = ({  movies }) => {
             <h2>Movie Search Results </h2>
             <MovieCards>
             {movieList.map(movie => (
-            <MovieCard key={movie.id} movie={movie} />   
-            ))}                
+            <MovieCard key={movie.id} movie={movie}/>   
+            ))}
+               
             </MovieCards>
 
         </MovieResultsContainer> : 
@@ -39,7 +41,8 @@ const mapStateToProps = state => {
         movies: state.movies,
         isFetching: state.isFetching,
         isLoaded: state.isLoaded,
-        error: state.error
+        error: state.error,
+        nominations: state.nominations
     }
 }
 
