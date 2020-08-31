@@ -21,16 +21,17 @@ const SearchBar = ({ fetchMovies }) => {
     return(
       <div>
         <h1>Search Movies</h1>
-        <span>Search movies by title </span>
 
         <form onSubmit={handleSubmit}>
             <input 
             name='title'
             type='title'
             label='title'
+            placeholder='Movie Title'
             onChange={handleChange}
-            required />
-        <button>Submit</button>
+            required 
+            minLength="3"/>
+        <button>Search</button>
         </form>
         
     </div>  

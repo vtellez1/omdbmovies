@@ -9,12 +9,22 @@ const SearchResults = ({  movies }) => {
 
     return (
     <div>
-        <h1>Search Results </h1>
 
-        {movies.isLoaded && 
-        movieList.map(movie => (
-         <MovieCard key={movie.id} movie={movie} />   
-        ))}
+        {movies.isFetching && <h2>Movies loading...! </h2>}
+        
+        {movies.isLoaded ? 
+        <div>
+            <h1>Search Results </h1>
+            {movieList.map(movie => (
+            <MovieCard key={movie.id} movie={movie} />   
+            ))}
+        </div> : 
+        
+        <div>
+            <p>Search a movie title to load movies</p>
+        </div>
+        }
+
     </div>        
     )
 };
