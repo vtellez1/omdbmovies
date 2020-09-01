@@ -29,7 +29,7 @@ const SearchBar = ({ fetchMovies }) => {
             onChange={handleChange}
             required 
             minLength="3"/>
-        <button>Search</button>
+        <button><i class="fas fa-search"></i></button>
         </form>
         
     </div>  
