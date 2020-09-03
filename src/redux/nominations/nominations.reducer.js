@@ -2,7 +2,7 @@ import NominationsActionTypes from './nominations.types'
 import { addNominationToList, removeNominationFromList} from './nominations.utils'
 
 const INITIAL_STATE = {
-    nominations: [],
+    nominations: {},
     nominationCount: 0
 }
 

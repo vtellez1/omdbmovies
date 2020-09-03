@@ -6,8 +6,7 @@ import { MovieResultsContainer, MovieCards } from '../components/searchResults/s
 
 const NominatedList = ({ nominations }) => {
 
-    let nominationList = nominations.nominations
-    console.log(nominationList);
+    let nominationList = Object.values(nominations.nominations);
 
     return(
     <div>
@@ -15,7 +14,7 @@ const NominatedList = ({ nominations }) => {
         <h1>Nominated Movies</h1>
         <MovieCards>
          {nominationList.map(movie => (
-            <MovieCard key={movie.id} movie={movie} nominated={true}/>   
+            <MovieCard key={movie.imdbID} movie={movie} nominated={true}/>   
             ))}            
         </MovieCards>
         </MovieResultsContainer>

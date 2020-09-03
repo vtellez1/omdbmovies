@@ -19,7 +19,7 @@ const SearchResults = ({ movies }) => {
             <h2>Movie Search Results </h2>
             <MovieCards>
             {movieList.map(movie => (
-            <MovieCard key={movie.id} movie={movie}/>   
+            <MovieCard key={movie.imdbID} movie={movie}/>   
             ))}
                
             </MovieCards>
