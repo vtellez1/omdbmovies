@@ -8,7 +8,7 @@ import nominationReducer from './nominations/nominations.reducer';
 const persistConfig = {
     key: 'root',
     storage,
-    whitelist: ['']
+    //whitelist: ['']
 }
 
 const rootReducer = combineReducers({
