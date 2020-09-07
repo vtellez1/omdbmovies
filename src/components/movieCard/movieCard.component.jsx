@@ -22,7 +22,8 @@ const MovieCard = ({ movie, nominations, addNomination, removeNomination, nomina
             <p>Release Year: {movie.Year}</p>
             {movie.imdbID in nominations.nominations ?
                 <button onClick={removeNominee}>Remove Nomination</button> :
-                <button onClick={movieClick}>Nominate</button>
+                Object.keys(nominations.nominations).length === 5 ? null :
+                    <button onClick={movieClick}>Nominate</button>  
             }
 
         </MovieCardContainer>        
