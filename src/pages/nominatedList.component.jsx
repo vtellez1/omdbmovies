@@ -12,7 +12,7 @@ const NominatedList = ({ nominations }) => {
     return(
     <PageContainer>
         <MovieResultsContainer>
-        <h1>Nominated Movies</h1>
+        <h2>Nominated Movies</h2>
         {Object.keys(nominations.nominations).length < 1 ? 
         <div>
         <i class="fas fa-star fa-2x"></i>  <i class="fas fa-film fa-2x"></i>  <i class="fas fa-video fa-2x"></i>

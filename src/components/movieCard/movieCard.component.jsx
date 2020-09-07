@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 
 import { addNomination, removeNomination } from '../../redux/nominations/nominations.actions'
 
-import { MovieCardContainer } from './movieCard.styles'
+import { MovieCardContainer, CardButton } from './movieCard.styles'
 
 const MovieCard = ({ movie, nominations, addNomination, removeNomination, nominated }) => {
 
@@ -21,9 +21,9 @@ const MovieCard = ({ movie, nominations, addNomination, removeNomination, nomina
             <h3>{movie.Title}</h3>
             <p>Release Year: {movie.Year}</p>
             {movie.imdbID in nominations.nominations ?
-                <button onClick={removeNominee}>Remove Nomination</button> :
+                <CardButton onClick={removeNominee}>Remove Nomination</CardButton> :
                 Object.keys(nominations.nominations).length === 5 ? null :
-                    <button onClick={movieClick}>Nominate</button>  
+                    <CardButton onClick={movieClick}>Nominate</CardButton>  
             }
         </MovieCardContainer>        
     )

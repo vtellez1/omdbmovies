@@ -18,6 +18,12 @@ export const NominationLink = styled(Link)`
 text-decoration: none;
 display: flex;
 align-items: center;
-color: black;
+color: white;
 font-size: 1.3rem;
+`
+
+export const StarIcon = styled.span`
+color: orange;
+font-size: 1.6rem;
+padding-left: .8rem;
 `
