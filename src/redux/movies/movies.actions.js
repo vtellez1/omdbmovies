@@ -1,5 +1,4 @@
 import MoviesActionTypes from './movies.types';
-
 import axios from 'axios';
 
 export const fetchMovies = (movieTitle) => dispatch => {

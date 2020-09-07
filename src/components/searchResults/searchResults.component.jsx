@@ -21,7 +21,6 @@ const SearchResults = ({ movies }) => {
             {movieList.map(movie => (
             <MovieCard key={movie.imdbID} movie={movie}/>   
             ))}
-               
             </MovieCards>
 
         </MovieResultsContainer> : 
