@@ -6,7 +6,7 @@ import { addNomination, removeNomination } from '../../redux/nominations/nominat
 import { MovieCardContainer } from './movieCard.styles'
 
 const MovieCard = ({ movie, nominations, addNomination, removeNomination, nominated }) => {
-    console.log(nominations.nominations)
+
     const movieClick = () => {
         addNomination(movie)
     }
