@@ -19,4 +19,5 @@ text-decoration: none;
 display: flex;
 align-items: center;
 color: black;
+font-size: 1.3rem;
 `
