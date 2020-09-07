@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 
 import MovieCard from '../movieCard/movieCard.component';
 
-import { MovieResultsContainer, MovieCards } from './searchResults.styles'
+import { MovieResultsContainer, MovieCards, LoadingDiv } from './searchResults.styles'
 
 const SearchResults = ({ movies }) => {
 
@@ -11,8 +11,12 @@ const SearchResults = ({ movies }) => {
 
     return (
     <div>
-
-        {movies.isFetching && <h2>Movies loading...! </h2>}
+        {movies.isFetching && 
+        <div>
+            <h2>Movies loading...! </h2>
+            <LoadingDiv></LoadingDiv>    
+        </div>
+        }
         
         {movies.isLoaded ? 
         <MovieResultsContainer>
