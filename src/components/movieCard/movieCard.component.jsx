@@ -5,8 +5,8 @@ import { addNomination, removeNomination } from '../../redux/nominations/nominat
 
 import { MovieCardContainer } from './movieCard.styles'
 
-const MovieCard = ({ movie, addNomination, removeNomination, nominated }) => {
-
+const MovieCard = ({ movie, nominations, addNomination, removeNomination, nominated }) => {
+    console.log(nominations.nominations)
     const movieClick = () => {
         addNomination(movie)
     }
@@ -20,10 +20,10 @@ const MovieCard = ({ movie, addNomination, removeNomination, nominated }) => {
             <img alt="movie poster" src={movie.Poster}/>
             <h3>{movie.Title}</h3>
             <p>Release Year: {movie.Year}</p>
-            {nominated ? 
-            <button onClick={removeNominee}>Remove Nomination</button> : 
-            <button onClick={movieClick}>Nominate</button>
-        }
+            {movie.imdbID in nominations.nominations ?
+                <button onClick={removeNominee}>Remove Nomination</button> :
+                <button onClick={movieClick}>Nominate</button>
+            }
 
         </MovieCardContainer>        
     )
@@ -31,7 +31,8 @@ const MovieCard = ({ movie, addNomination, removeNomination, nominated }) => {
 
 const mapStateToProps = state => {
     return{
-        movies: state.movies
+        movies: state.movies,
+        nominations: state.nominations
     }
 }
 
