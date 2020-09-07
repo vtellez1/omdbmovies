@@ -1,11 +1,15 @@
 import styled from 'styled-components';
 
 export const MovieCardContainer = styled.div`
-width: 38%;
+width: 25%;
 padding: 1.5rem;
 margin: 1rem;
 background-color: #101010;
-box-shadow: 0 4px 8px 0 orange, 0 6px 20px 0 darkorange;
+box-shadow: 0 4px 8px 0 gold, 0 6px 20px 0 darkorange;
+`
+
+export const MoviePoster = styled.img`
+width: 100%;
 `
 
 export const CardButton = styled.button`

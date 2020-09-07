@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 
 import { addNomination, removeNomination } from '../../redux/nominations/nominations.actions'
 
-import { MovieCardContainer, CardButton } from './movieCard.styles'
+import { MovieCardContainer, CardButton, MoviePoster } from './movieCard.styles'
 
 const MovieCard = ({ movie, nominations, addNomination, removeNomination, nominated }) => {
 
@@ -17,7 +17,7 @@ const MovieCard = ({ movie, nominations, addNomination, removeNomination, nomina
 
     return (
         <MovieCardContainer>
-            <img alt="movie poster" src={movie.Poster}/>
+            <MoviePoster alt="movie poster" src={movie.Poster}/>
             <h3>{movie.Title}</h3>
             <p>Release Year: {movie.Year}</p>
             {movie.imdbID in nominations.nominations ?
