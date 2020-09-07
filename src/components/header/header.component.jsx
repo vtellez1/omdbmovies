@@ -9,7 +9,7 @@ const Header = ({ nominations }) => {
     return(
     <HeaderContainer>
         <HomeLink to='/'><h1>Movie Awards <i class="fas fa-trophy"></i></h1></HomeLink>
-        <NominationLink to='/nominated'> View Your Nomination List: {nominations.nominationCount} <i class="far fa-star"></i> </NominationLink>
+        <NominationLink to='/nominated'> View Your Nomination List: {Object.keys(nominations.nominations).length} <i class="far fa-star"></i> </NominationLink>
     </HeaderContainer>        
     )
 };
