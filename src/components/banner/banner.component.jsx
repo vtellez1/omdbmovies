@@ -9,7 +9,7 @@ const Banner = ({ nominations }) => {
     <BannerContainer>
         {Object.keys(nominations.nominations).length >= 5 ? 
         <BannerDiv>
-        <h1>5 Movies Have Been Nominated!</h1>
+        <h1>You're done! <br></br>5 Movies Have Been Nominated.</h1>
         <p>If you want to add a new movie, please remove one from nomination list. </p>   
         </BannerDiv>
          : null }
