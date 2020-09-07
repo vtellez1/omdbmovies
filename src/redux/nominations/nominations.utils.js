@@ -23,7 +23,7 @@ export const removeNominationFromList = (nominationList, movieToRemove) => {
         if(key !== removeID){
             object[key] = nominationList[key]
         }
-        return nominationList
+        return object
     }, {})
 
 return newNominationList
