@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 
 import MovieCard from '../components/movieCard/movieCard.component';
 import { MovieResultsContainer, MovieCards } from '../components/searchResults/searchResults.styles';
-import { PageContainer } from './homepage.styles';
+import { PageContainer, NoNominationsContainer } from './homepage.styles';
 
 const NominatedList = ({ nominations }) => {
 
@@ -14,10 +14,10 @@ const NominatedList = ({ nominations }) => {
         <MovieResultsContainer>
         <h2>Nominated Movies</h2>
         {Object.keys(nominations.nominations).length < 1 ? 
-        <div>
-        <i class="fas fa-star fa-2x"></i>  <i class="fas fa-film fa-2x"></i>  <i class="fas fa-video fa-2x"></i>
+        <NoNominationsContainer>
+        <i class="fas fa-star fa-2x"></i>  <i class="fas fa-star fa-2x"></i> <i class="fas fa-star fa-2x"></i> <i class="fas fa-star fa-2x"></i> <i class="fas fa-star fa-2x"></i>
         <p>  Start nominating movies and see your list here! </p>    
-        </div>
+        </NoNominationsContainer>
          : null}
 
         <MovieCards>
