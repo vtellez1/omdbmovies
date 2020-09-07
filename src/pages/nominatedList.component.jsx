@@ -13,6 +13,13 @@ const NominatedList = ({ nominations }) => {
     <PageContainer>
         <MovieResultsContainer>
         <h1>Nominated Movies</h1>
+        {Object.keys(nominations.nominations).length < 1 ? 
+        <div>
+        <i class="fas fa-star fa-2x"></i>  <i class="fas fa-film fa-2x"></i>  <i class="fas fa-video fa-2x"></i>
+        <p>  Start nominating movies and see your list here! </p>    
+        </div>
+         : null}
+
         <MovieCards>
          {nominationList.map(movie => (
             <MovieCard key={movie.imdbID} movie={movie} nominated={true}/>   
