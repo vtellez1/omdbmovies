@@ -5,6 +5,6 @@ padding: 1rem 2.5rem;
 `
 
 export const BannerDiv = styled.div`
-background-color: red;
+background-color: #800000;
 padding: 2rem;
 `
