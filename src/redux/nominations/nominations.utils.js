@@ -1,8 +1,13 @@
 export const addNominationToList = (nominationList, movieToAdd) => {
+if(Object.keys(nominationList).length === 5){
+    return nominationList
+}
+
 if(!(movieToAdd.imdbID in nominationList)){
     nominationList[movieToAdd.imdbID] = movieToAdd
 }
 return nominationList
+
 };
 
 
