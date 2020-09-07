@@ -3,13 +3,14 @@ import { connect } from 'react-redux';
 
 import MovieCard from '../components/movieCard/movieCard.component';
 import { MovieResultsContainer, MovieCards } from '../components/searchResults/searchResults.styles';
+import { PageContainer } from './homepage.styles';
 
 const NominatedList = ({ nominations }) => {
 
     let nominationList = Object.values(nominations.nominations);
 
     return(
-    <div>
+    <PageContainer>
         <MovieResultsContainer>
         <h1>Nominated Movies</h1>
         <MovieCards>
@@ -18,8 +19,7 @@ const NominatedList = ({ nominations }) => {
             ))}            
         </MovieCards>
         </MovieResultsContainer>
-
-    </div>
+    </PageContainer>
     )
 
 };

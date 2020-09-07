@@ -3,13 +3,13 @@ import React from 'react';
 import SearchBar from '../components/searchBar/searchBar.component';
 import SearchResults from '../components/searchResults/searchResults.component';
 
-import { HomepageContainer } from './homepage.styles';
+import { PageContainer } from './homepage.styles';
 
 const Homepage = () => (
-    <HomepageContainer>
+    <PageContainer>
         <SearchBar/>
         <SearchResults/>
-    </HomepageContainer>
+    </PageContainer>
 );
 
 export default Homepage;

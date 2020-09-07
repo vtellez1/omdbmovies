@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const HomepageContainer = styled.div`
+export const PageContainer = styled.div`
 width: 80%;
 margin: auto;
 padding: 2rem;

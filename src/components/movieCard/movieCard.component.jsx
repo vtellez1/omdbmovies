@@ -25,7 +25,6 @@ const MovieCard = ({ movie, nominations, addNomination, removeNomination, nomina
                 Object.keys(nominations.nominations).length === 5 ? null :
                     <button onClick={movieClick}>Nominate</button>  
             }
-
         </MovieCardContainer>        
     )
 };
