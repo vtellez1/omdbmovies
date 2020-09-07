@@ -3,6 +3,8 @@ import { connect } from 'react-redux';
 
 import { fetchMovies } from '../../redux/movies/movies.actions';
 
+import { InputStyled, SearchButton } from './searchBar.styles'
+
 const SearchBar = ({ fetchMovies }) => {
     
     const [movieTitle, setMovieTitle ] = useState({title: ''});
@@ -21,7 +23,7 @@ const SearchBar = ({ fetchMovies }) => {
     return(
       <div>
         <form onSubmit={handleSubmit}>
-            <input 
+            <InputStyled
             name='title'
             type='title'
             label='title'
@@ -29,7 +31,7 @@ const SearchBar = ({ fetchMovies }) => {
             onChange={handleChange}
             required 
             minLength="3"/>
-        <button><i class="fas fa-search"></i></button>
+        <SearchButton><i class="fas fa-search"></i></SearchButton>
         </form>
         
     </div>  
