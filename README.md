@@ -17,6 +17,8 @@ A webpage that can search OMDB for movies, and allow the user to save their 5 fa
 - Movies in search results can be added and removed from the nomination list.
 - If a search result has already been nominated, its nominate button is disabled and remove nomination button appears.
 - Banner displayed when user has 5 nominations.
+- App persists with user's previous searched movies and nominated list.
+- Animated loading wheel when fetching movies. 
 
 ## Built with:
 
@@ -29,6 +31,10 @@ A webpage that can search OMDB for movies, and allow the user to save their 5 fa
 ## Deployed site:
 
 - https://omdb-movies-tellez.netlify.app/
+
+## Future Features/WIP:
+- Pagination for more movie options
+- Mobile/Tablet Responsive
 
 ## Installation:
 
