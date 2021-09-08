@@ -22,13 +22,13 @@ const SearchBar = ({ fetchMovies }) => {
     }
 
     const backPage = () => {
-        if(pageNumber > 1 && title != ''){
+        if(pageNumber > 1 && title !== ''){
             setPageNumber(pageNumber - 1)    
         }
     }
 
     const nextPage = () => {
-        if(pageNumber < 100 && title != ''){
+        if(pageNumber < 100 && title !== ''){
             setPageNumber(pageNumber + 1)    
         }
     }
