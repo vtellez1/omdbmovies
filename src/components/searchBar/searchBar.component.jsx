@@ -3,11 +3,12 @@ import { connect } from 'react-redux';
 
 import { fetchMovies } from '../../redux/movies/movies.actions';
 
-import { InputStyled, SearchButton } from './searchBar.styles'
+import { InputStyled, SearchButton, InputPage, InputDiv, TitleDiv, PageNumDiv, PageNumber} from './searchBar.styles'
 
 const SearchBar = ({ fetchMovies }) => {
     
     const [movieTitle, setMovieTitle ] = useState({title: ''});
+    const [pageNumber, setPageNumber ] = useState(1);
 
     const { title } = movieTitle;
     
@@ -17,21 +18,44 @@ const SearchBar = ({ fetchMovies }) => {
 
     const handleSubmit = e => {
         e.preventDefault();
-        fetchMovies(title);
+        fetchMovies(title, pageNumber);
     }
 
+    const backPage = () => {
+        if(pageNumber > 1 && title != ''){
+            setPageNumber(pageNumber - 1)    
+        }
+    }
+
+    const nextPage = () => {
+        if(pageNumber < 100 && title != ''){
+            setPageNumber(pageNumber + 1)    
+        }
+    }
     return(
       <div>
         <form onSubmit={handleSubmit}>
-            <InputStyled
-            name='title'
-            type='title'
-            label='title'
-            placeholder='Search movie title'
-            onChange={handleChange}
-            required 
-            minLength="3"/>
-        <SearchButton><i class="fas fa-search"></i></SearchButton>
+            <InputDiv>
+                <TitleDiv>
+                    <InputStyled
+                    name='title'
+                    type='title'
+                    label='title'
+                    placeholder='Search movie title'
+                    onChange={handleChange}
+                    required 
+                    minLength="3"/>
+                    <SearchButton><i class="fas fa-search"></i></SearchButton>               
+                </TitleDiv>
+
+                <PageNumDiv>
+                    <button onClick={backPage}><i class="fas fa-angle-left"></i></button>
+                    <PageNumber>{pageNumber}</PageNumber>
+                    <button onClick={nextPage}><i class="fas fa-angle-right"></i></button>
+                </PageNumDiv> 
+            </InputDiv>
+
+        
         </form>
         
     </div>  
