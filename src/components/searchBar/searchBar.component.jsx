@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 
 import { fetchMovies } from '../../redux/movies/movies.actions';
 
-import { InputStyled, SearchButton, InputPage, InputDiv, TitleDiv, PageNumDiv, PageNumber} from './searchBar.styles'
+import { InputStyled, SearchButton, InputDiv, TitleDiv, PageNumDiv, PageNumber} from './searchBar.styles'
 
 const SearchBar = ({ fetchMovies }) => {
     
