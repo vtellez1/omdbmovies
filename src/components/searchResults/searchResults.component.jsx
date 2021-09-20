@@ -21,7 +21,6 @@ const SearchResults = ({ movies }) => {
         {movieList === undefined ? <h3>No movie found. Try search again.</h3> : 
         movies.isLoaded ? 
         <MovieResultsContainer>
-            <h2>Movie Search Results </h2>
             <MovieCards>
             {movieList.map(movie => (
             <MovieCard key={movie.imdbID} movie={movie}/>   

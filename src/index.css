@@ -3,8 +3,8 @@ body {
   font-family: 'Limelight', cursive;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: black;
-  color: white;
+  background-color: white;
+  color: black;
 }
 
 code {

@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import { connect } from 'react-redux';
 
 import { fetchMovies } from '../../redux/movies/movies.actions';
-
-import { InputStyled, SearchButton, InputDiv, TitleDiv, PageNumDiv, PageNumber} from './searchBar.styles'
+import SearchResults from '../searchResults/searchResults.component';
+import { InputStyled, SearchButton, InputDiv, TitleDiv, PageNumDiv, PageNumber, CurrentPageNumber, PageButton} from './searchBar.styles'
 
 const SearchBar = ({ fetchMovies }) => {
     
@@ -32,6 +32,7 @@ const SearchBar = ({ fetchMovies }) => {
             setPageNumber(pageNumber + 1)    
         }
     }
+
     return(
       <div>
         <form onSubmit={handleSubmit}>
@@ -48,10 +49,15 @@ const SearchBar = ({ fetchMovies }) => {
                     <SearchButton><i class="fas fa-search"></i></SearchButton>               
                 </TitleDiv>
 
+            <SearchResults/>
+
                 <PageNumDiv>
-                    <button onClick={backPage}><i class="fas fa-angle-left"></i></button>
-                    <PageNumber>{pageNumber}</PageNumber>
-                    <button onClick={nextPage}><i class="fas fa-angle-right"></i></button>
+                    
+                    <PageButton onClick={backPage}><i class="fas fa-angle-left"></i></PageButton>
+                    <PageNumber id="prevNumber">{pageNumber - 1}</PageNumber>              
+                    <CurrentPageNumber>{pageNumber}</CurrentPageNumber>
+                    <PageNumber>{pageNumber + 1}</PageNumber>
+                    <PageButton onClick={nextPage}><i class="fas fa-angle-right"></i></PageButton>
                 </PageNumDiv> 
             </InputDiv>
 

@@ -5,6 +5,7 @@ export const HeaderContainer = styled.div`
 padding: 1rem 2.5rem;
 display: flex;
 justify-content: space-between;
+border-bottom: 1px solid lightgray;
 `
 
 export const HomeLink = styled(Link)`
@@ -18,7 +19,7 @@ export const NominationLink = styled(Link)`
 text-decoration: none;
 display: flex;
 align-items: center;
-color: white;
+color: Black;
 font-size: 1.3rem;
 `
 

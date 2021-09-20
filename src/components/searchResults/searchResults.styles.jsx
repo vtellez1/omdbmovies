@@ -3,6 +3,8 @@ import styled, { keyframes } from 'styled-components';
 export const MovieResultsContainer = styled.div`
 display: flex;
 flex-direction: column;
+margin-top: 2rem;
+margin-bottom: 1.5rem;
 `
 
 export const MovieCards = styled.div`
