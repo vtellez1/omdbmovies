@@ -3,8 +3,9 @@ import styled, { keyframes } from 'styled-components';
 export const MovieResultsContainer = styled.div`
 display: flex;
 flex-direction: column;
-margin-top: 2rem;
+margin: 2rem auto;
 margin-bottom: 1.5rem;
+width: 85%;
 `
 
 export const MovieCards = styled.div`
@@ -31,4 +32,6 @@ width: 7rem;
 height: 7rem;
 animation: ${spinKeyFrame} 2s linear infinite;
 `
-
+export const Instructions = styled.p `
+    color: white;
+`

@@ -11,3 +11,13 @@ export const fetchMovies = (movieTitle, page) => dispatch => {
         .catch(err => dispatch({ type: MoviesActionTypes.FETCH_MOVIES_FAILURE,
             payload: err.response }))
 };
+
+export const saveTitle = movieTitle => ({
+    type: MoviesActionTypes.SAVE_TITLE,
+    payload: movieTitle
+})
+
+export const savePage = page => ({
+    type: MoviesActionTypes.SAVE_PAGE,
+    payload: page
+})

@@ -4,6 +4,8 @@ const INITIAL_STATE = {
     movies: [],
     isFetching: false,
     isLoaded: false,
+    savedTitle: '',
+    savedPageNum: 1,
     error: ''
 }
 
@@ -28,7 +30,17 @@ const moviesReducer = (state = INITIAL_STATE, action) => {
                 isFetching: false,
                 isLoaded: false,
                 error: action.payload
-            };
+            }
+        case MoviesActionTypes.SAVE_TITLE:
+            return {
+                ...state,
+                savedTitle: action.payload
+            }
+        case MoviesActionTypes.SAVE_PAGE:
+            return {
+                ...state,
+                savedPageNum: action.payload
+            }
         default:
             return state;
     }

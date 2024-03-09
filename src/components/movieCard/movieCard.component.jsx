@@ -16,13 +16,13 @@ const MovieCard = ({ movie, nominations, addNomination, removeNomination, nomina
     }
 
     return (
-        <MovieCardContainer>
-            <MoviePoster alt="movie poster" src={movie.Poster}/>
+        <MovieCardContainer className='grow'>
+            <MoviePoster alt="movie poster" src={movie.Poster} />
             <MovieContents>
             {movie.imdbID in nominations.nominations ?
-                    <CardButton onClick={removeNominee}>Remove Nomination</CardButton> :
+                    <CardButton onClick={removeNominee} >Remove Nomination</CardButton> :
                     Object.keys(nominations.nominations).length === 5 ? null :
-                        <CardButton onClick={movieClick}>Nominate</CardButton>  
+                        <CardButton onClick={movieClick} >Nominate</CardButton>  
                 } 
                 <h3>{movie.Title}</h3>
                 <p>Release Year: {movie.Year}</p>

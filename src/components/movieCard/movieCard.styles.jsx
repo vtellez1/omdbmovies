@@ -1,16 +1,23 @@
 import styled from 'styled-components';
 
 export const MovieCardContainer = styled.div`
-    width: 18%;
+    width: 10rem;
     padding: 1rem;
-    margin: .8rem;
+    margin: .5rem;
     background-color: #f5f5f5;
     box-shadow: 0 3px 7px 0 darkgray, 0 5px 18px 0 darkgray;
+
+    &.grow {
+        transition: all .2s ease-in-out;
+
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
 `
 
 export const MoviePoster = styled.img`
-    width: 100%;
-    max-height: 15rem;
+    max-height: 10rem;
 `
 
 export const MovieContents = styled.div`
@@ -24,8 +31,8 @@ export const MovieContents = styled.div`
 export const CardButton = styled.button`
     color: white;
     background-color: orange;
-    padding: .6rem .9rem;
-    margin: 1rem 0rem;
+    padding: .5rem .8rem;
+    margin: .5rem 0rem;
     cursor: pointer;
     outline: none;
     border: none;

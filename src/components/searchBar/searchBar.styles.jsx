@@ -30,19 +30,26 @@ export const PageNumDiv = styled.div`
 
 export const PageButton = styled.button`
     padding: 12px;
+    cursor: pointer;
 `
 
 export const PageNumber = styled.h2`
     padding: 6px 10px;
     border: .5px solid lightgray;
     margin: 8px;
+    color: #3b3b3b;
+    background-color: #D3D3D3;
+    cursor: default;
 `
 
 export const CurrentPageNumber = styled.h2`
     padding: 6px 10px;
-    border: .5px solid darkgray;
-    margin: 5px;
+    border: 1.5px solid black;
+    margin: 4px;
     background: orange;
+    color: white;
+    text-shadow: 1px 1px 2px black;
+    cursor: default;
 `
 
 export const InputDiv = styled.div`

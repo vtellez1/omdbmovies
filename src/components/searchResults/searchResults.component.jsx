@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 
 import MovieCard from '../movieCard/movieCard.component';
 
-import { MovieResultsContainer, MovieCards, LoadingDiv } from './searchResults.styles'
+import { MovieResultsContainer, MovieCards, LoadingDiv, Instructions } from './searchResults.styles'
 
 const SearchResults = ({ movies }) => {
 
@@ -30,7 +30,7 @@ const SearchResults = ({ movies }) => {
         </MovieResultsContainer> : 
         
         <div>
-            <p>Search a movie title to load movies.</p>
+            <Instructions>Search a movie title to load movies.</Instructions>
         </div>
         }
 
